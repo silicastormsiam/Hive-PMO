@@ -7,7 +7,7 @@ that person approves.
 
 Built and owned by [silicastormsiam](https://github.com/silicastormsiam).
 
-Version: 1.1.0
+Version: 1.2.0
 
 ![The board with nothing on it](docs/board.png)
 
@@ -369,8 +369,8 @@ The cost counter carries named tests, and they need no Docker and no install:
 node --test "tests/*.test.mjs"
 ```
 
-The workflow in `.github/workflows/check.yml` runs them on every push. It can also
-run the full check below, from the Actions page, when asked.
+The tests are run by hand; the command above is the whole of it. Nothing runs them
+for you, and the download carries no workflow.
 
 `./check.sh` is the slower proof: it builds the board, waits for it to answer, and
 takes everything down again.

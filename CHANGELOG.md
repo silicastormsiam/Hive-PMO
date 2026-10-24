@@ -4,6 +4,13 @@ Every notable change to this project is written here, newest first. The form is
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the versions are this
 project's own release tags.
 
+## [1.2.0] - 2026-10-24
+
+### Fixed
+- The read-me said a workflow ran the tests on every push, while the download carried
+  no workflow and this file said one had been added. Both lines are gone; the read-me
+  now says plainly that the tests are run by hand with one command.
+
 ## [1.1.0] - 2026-10-24
 
 ### Added
@@ -12,8 +19,6 @@ project's own release tags.
 - AGENTS.md, a short note telling the next person - or the next agent - which folder
   does what and what to run.
 - tests/costs.test.mjs, named tests for the cost counter, run with one command.
-- .github/workflows/check.yml, which runs those tests on every push and can run the
-  full board check when asked.
 - The licence is declared in the package manifest.
 
 ### Changed
