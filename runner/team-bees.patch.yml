@@ -1,0 +1,6 @@
+- id: agent-teams
+  config:
+    stateDir: .agent-teams
+    memberProvider: spawn
+    memberMaxDepth: 0
+    maxMembers: 6

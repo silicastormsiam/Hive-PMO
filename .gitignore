@@ -1,0 +1,14 @@
+# The settings and the data never travel.
+.env
+.env.*
+!.env.example
+
+# The database and the card working folders live beside the compose file.
+db/
+work/
+
+# Build and editor leftovers.
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,37 @@
+name: hive
+services:
+  hive-db:
+    image: postgres:18
+    container_name: hive-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  hive:
+    build: ./app
+    container_name: hive
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      PMO_PORT: ${PMO_PORT}
+      PMO_HOME: ${PMO_HOME:-/var/lib/hive}
+      HIVE_REPAIR_ROUNDS: ${HIVE_REPAIR_ROUNDS:-1}
+      HIVE_QUEEN_SWITCH: ${HIVE_QUEEN_SWITCH:-http://host.docker.internal:3471}
+    ports:
+      - "${PMO_PORT}:${PMO_PORT}"
+    volumes:
+      - ./work:${PMO_HOME:-/var/lib/hive}/work:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      hive-db:
+        condition: service_healthy

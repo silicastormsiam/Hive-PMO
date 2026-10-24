@@ -1,0 +1,85 @@
+HIVE PMO — LICENCES AND CREDITS
+Version: 1.1
+Date: 23 Oct 2026
+Owner: silicastormsiam
+
+WHAT THIS FILE IS
+
+Hive PMO is MIT licensed. Copyright 2026 silicastormsiam.
+
+One part of the board's page was taken from a third-party plug-in whose licence
+requires its copyright line and its licence text to travel with the code taken
+from it. This file carries that. Every line below was read off the installed
+licence files, not written from memory.
+
+
+1. AgentTeams for DeepSeek Harness
+
+  package      @nanmicoder/dsh-agent-teams
+  version      0.1.23
+  repository   https://github.com/NanmiCoder/dsh-agent-teams
+  licence      MIT
+
+  Copyright (c) 2026 程序员阿江(Relakkes)
+
+  WHAT WAS TAKEN FROM IT
+
+  The team activity window inside the board's page: that panel's class names, its
+  section order and its English words, and its stylesheet, which is the board's
+  team-panel.css.
+
+  ITS LICENCE, AS IT STANDS WITH IT
+
+MIT License
+
+Copyright (c) 2026 程序员阿江(Relakkes)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+2. DeepSeek Harness
+
+  package      @deepseek-ai/dsh
+  repository   https://github.com/deepseek-ai/deepseek-harness
+  licence      MIT
+
+  No part of it is copied into this repository. The board starts it as an
+  installed program when an agent works a stage.
+
+
+3. node-postgres
+
+  package      pg
+  repository   https://github.com/brianc/node-postgres
+  licence      MIT
+
+  No part of it is copied into this repository. The board installs it as a
+  library, and it brings its own small helpers under their own licences.
+
+  The database is PostgreSQL 18, which carries "Portions Copyright (c) 1996-2019,
+  PostgreSQL Global Development Group". That notice belongs to the database
+  software, not to this code.
+
+
+4. This repository
+
+  Copyright (c) 2026 silicastormsiam
+  Licence: MIT
+
+  The MIT text stands in LICENSE at the root of this repository.
